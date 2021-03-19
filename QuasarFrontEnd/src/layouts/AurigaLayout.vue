@@ -16,6 +16,10 @@
                 Eolian Áuriga
                 </q-toolbar-title>
                 <q-btn
+                  to="/pilot">
+                  P
+                </q-btn>
+                <q-btn
                 :loading="loading2"
                 :percentage="percentage2"
                 round

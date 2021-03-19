@@ -4,7 +4,7 @@
             <q-space />
             <q-btn size="30px" flat round dense icon="home" type="a" href="/auriga" />
             <q-space />
-            <q-btn size="30px" flat round dense icon="battery_charging_full" />
+            <q-btn size="30px" flat round dense icon="battery_charging_full" type="a" href="/aurigabaterias" />
             <q-space />
             <q-btn size="30px" flat round dense icon="map" type="a" href="/map" />
             <q-space />

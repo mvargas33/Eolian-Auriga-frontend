@@ -52,7 +52,14 @@ const routes = [
     path: '/aurigabaterias',
     component: () => import('layouts/AurigaLayout.vue'),
     children: [
-      { path: '/aurigabaterias', component: () => import('pages/AurigaBaterias.vue') }
+      { path: '', component: () => import('pages/AurigaBaterias.vue') }
+    ]
+  },
+  {
+    path: '/pilot',
+    component: () => import('layouts/Auriga-PilotLayout.vue'),
+    children: [
+      { path: '/pilot', component: () => import('pages/Pilot.vue') }
     ]
   }
 ]

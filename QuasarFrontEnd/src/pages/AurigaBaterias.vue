@@ -1,55 +1,23 @@
 <template>
-    <div class="padding-5">
-      <div>
-        <AlertasSuperiores></AlertasSuperiores>
-      </div>
+  <q-page class="flex flex-center topCenter-auriga">
+    <div class="col">
       <div class="row">
-        <div class="col">
-          <h5>67 Km/Hr</h5>
-        </div>
-        <div class="col">
-          <Marcha></Marcha>
-        </div>
-        <div class="col">
-          <h5>3.1 KW</h5>
-        </div>
+        <PrincipalResumen></PrincipalResumen>
       </div>
-      <div class="q-pa-md">
-        <q-linear-progress rounded size="20px" :value="progress" color="warning" class="q-mt-sm" />
-      </div>
-      <hr/>
+      <!--
       <div class="row">
-        <div class="col">
-          <div class="row">
-            <div class="col">
-              <h5>{{ minBatteries }}</h5>
-            </div>
-            <div class="col">
-              <h5>{{ meanBatteries }}</h5>
-            </div>
-            <div class="col">
-              <h5>{{ maxBatteries }}</h5>
-            </div>
+          <div class="col">
+            <h5>{{ minBatteries }}</h5>
           </div>
-        </div>
-        <div class="col">
-          <AlertasInferiores/>
-        </div>
-         <div class="row">
-            <div class="col">
-              <h5>{{ minBatteries }}</h5>
-            </div>
-            <div class="col">
-              <h5>{{ meanBatteries }}</h5>
-            </div>
-            <div class="col">
-              <h5>{{ maxBatteries }}</h5>
-            </div>
+          <div class="col">
+            <h5>{{ meanBatteries }}</h5>
+          </div>
+          <div class="col">
+            <h5>{{ maxBatteries }}</h5>
           </div>
       </div>
-      <hr/>
-      <!-- <q-btn color="white" text-color="black" label="Change Modulo 1" @click="updateModulo(0)"/> -->
-        <div class="" v-for='(modulo, index) in bms_volt' :key="index" >
+      -->
+      <div class="" v-for='(modulo, index) in bms_volt' :key="index" >
           <div class="row padding-1" v-if="index % 5 === 0">
             <div class="col">
               <div class="row">
@@ -152,15 +120,19 @@
               </div>
             </div>
           </div>
-        </div>
+      </div>
+      <div class="row">
+        <Menu></Menu>
+      </div>
     </div>
+  </q-page>
 </template>
 
 <script>
 
-import AlertasSuperiores from '../components/Auriga/AlertasSuperiores'
-import AlertasInferiores from '../components/Auriga/AlertasInferiores'
-import Marcha from '../components/Auriga/Marcha'
+import PrincipalResumen from '../components/Auriga/Principal_Resumen'
+import Menu from '../components/Auriga/Menu'
+
 /* Métodos para interpolar colores en RGB o HSL. Source: https://codepen.io/njmcode/pen/axoyD/ */
 
 // // Converts a #ffffff hex string into an [r,g,b] array
@@ -258,8 +230,8 @@ export default {
       progress: '0.5'
     }
   },
-  components: { AlertasSuperiores, AlertasInferiores, Marcha },
   name: 'BancoBaterias',
+  components: { PrincipalResumen, Menu },
   computed: {
     ...mapState('fenix', ['bms_volt', 'bms_temp']),
     minBatteries () {
