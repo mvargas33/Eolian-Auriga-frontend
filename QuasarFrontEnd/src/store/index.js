@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import fenix from './module-fenix/index'
 import general from './module-general/index'
+import auriga from './module-auriga/index'
 
 // import example from './module-example'
 
@@ -48,7 +49,8 @@ export default function (/* { ssrContext } */) {
     },
     modules: {
       fenix,
-      general
+      general,
+      auriga
     },
 
     // enable strict mode (adds overhead!)
