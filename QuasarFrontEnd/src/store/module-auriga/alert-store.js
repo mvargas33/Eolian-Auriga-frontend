@@ -160,6 +160,150 @@ const alert_store = {
     },
     color: 'red'
   },
+  15: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Driving off while plugged in.',
+    color: 'red',
+  },
+  16: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Interlock is tripped.',
+    color: 'red'
+  },
+  16: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Communication fault with a bank or cell.',
+    color: 'red'
+  },
+  17: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Charge overcurrent.',
+    color: 'red'
+  },
+  18: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Over-temperature.',
+    color: 'red'
+  },
+  19: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Under voltage.',
+    color: 'red'
+  },
+  20: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Over voltage.',
+    color: 'red'
+  },
+  21: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Over voltage.',
+    color: 'red'
+  },
+  22: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Low voltage.',
+    color: 'red'
+  },
+  23: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'High voltage. ',
+    color: 'red'
+  },
+  24: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Charge overcurrent.',
+    color: 'red'
+  },
+  25: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Discharge overcurrent.',
+    color: 'red'
+  },
+  26: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Cold temperature.',
+    color: 'red'
+  },
+  27: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Hot temperature.',
+    color: 'red'
+  },
+  28: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Low SOH.',
+    color: 'red'
+  },
+  29: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: null,
+    limit_superior: null,
+    message: 'Isolation fault.',
+    color: 'red'
+  },
   bms_alert_text: {
     'Byte of flags':
         {
