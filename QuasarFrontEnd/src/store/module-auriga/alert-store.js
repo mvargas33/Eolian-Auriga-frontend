@@ -229,7 +229,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Over voltage.',
+    message: 'Low voltage.',
     color: 'red'
   },
   22: {
@@ -238,7 +238,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Low voltage.',
+    message: 'High voltage.',
     color: 'red'
   },
   23: {
@@ -247,7 +247,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'High voltage. ',
+    message: 'Charge overcurrent.',
     color: 'red'
   },
   24: {
@@ -256,7 +256,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Charge overcurrent.',
+    message: 'Discharge overcurrent.',
     color: 'red'
   },
   25: {
@@ -265,7 +265,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Discharge overcurrent.',
+    message: 'Cold temperature.',
     color: 'red'
   },
   26: {
@@ -274,7 +274,7 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Cold temperature.',
+    message: 'Hot temperature.',
     color: 'red'
   },
   27: {
@@ -283,19 +283,10 @@ const alert_store = {
     default: 0,
     limit_inferior: null,
     limit_superior: null,
-    message: 'Hot temperature.',
-    color: 'red'
-  },
-  28: {
-    alert: true,
-    its_binary: true,
-    default: 0,
-    limit_inferior: null,
-    limit_superior: null,
     message: 'Low SOH.',
     color: 'red'
   },
-  29: {
+  28: {
     alert: true,
     its_binary: true,
     default: 0,
