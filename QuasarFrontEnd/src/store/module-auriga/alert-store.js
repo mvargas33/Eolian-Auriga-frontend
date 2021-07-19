@@ -6,7 +6,9 @@ const alert_store = {
     limit_inferior: null,
     limit_superior: null,
     message: 'Fault state: BMS master is in the Fault State.',
-    color: 'red'
+    color: 'red',
+    view: 'bms',
+    element_id: null
   },
   1: {
     alert: false,
@@ -15,7 +17,9 @@ const alert_store = {
     limit_inferior: null,
     limit_superior: null,
     message: 'Contactor K1 is on: K1 LED is on and K3 output is grounded in COILS connector on BMS master; K1 output of HVFE is grounded.',
-    color: null
+    color: null,
+    view: 'bms',
+    element_id: ['iconoK1', 'iconoK2']
   },
   2: {
     alert: false,

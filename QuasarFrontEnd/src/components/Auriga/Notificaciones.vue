@@ -45,7 +45,7 @@ export default {
         }
       }
     },
-    in_limits (bms_variable_info, value) {
+    in_limits (bms_variable_info, value) { // Deberíamos chequear que sea != al default Y al valor anterior (porque si no se repite la misma alarma, cuando cambia el valor en otro indice)
       if (bms_variable_info.alert) {
         if (bms_variable_info.is_binary && value !== bms_variable_info.default) {
           return false
@@ -67,7 +67,7 @@ export default {
         color: color,
         textColor: 'white'
         // actions: [
-        //    { label: 'Dismiss', color: 'white', handler: () => { /* ... */ } } Para ir a la vista asociada al error, tal vez es otra variable que deberiamos guardar en el store
+        //    { label: 'Ir al banco', color: 'white', handler: () => { /* ... */ } } Para ir a la vista asociada al error y cambiarle el css al elemento HTML del error (getElementById), tal vez es otra variable que deberiamos guardar en el store
         //  ]
         // group: '' Se supone que las que son iguales se están agrupando por default, pero si queremos ser más específicos podemos ocupar estas propiedades
         // badgeColor: '',
@@ -77,7 +77,9 @@ export default {
     }
   }
 }
-// Iconos
-// Agregar todas las variables (quedé en el fault code)
+// Iconos --> Revisan el bms y se mantiene prendido/apagado (por mientras usar cualquier SVG cuadrado)
+// Agregar todas las variables (quedé en el fault code: armar ese diccionario y hardcodear)
+// Action --> handler
+// Comparar con array bms anterior
 // Terminar la estética (urgente: tamaño)
 </script>
