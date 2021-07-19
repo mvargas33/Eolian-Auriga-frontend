@@ -36,10 +36,10 @@ export default {
       var bms = context.bms
       var bms_variable_info = context.bms_variable_info
       var i
-      for (i = 0; i < 14; i++) {
+      for (i = 0; i < 15; i++) {
         var value = bms[i]
         if (!this.in_limits(bms_variable_info[i], value)) {
-          var msg = bms_variable_info[i].message
+          var msg = this.get_message(bms_variable_info[i], i, value)
           var color = bms_variable_info[i].color
           this.triggerWarning(msg, color)
         }
@@ -47,14 +47,20 @@ export default {
     },
     in_limits (bms_variable_info, value) { // Deberíamos chequear que sea != al default Y al valor anterior (porque si no se repite la misma alarma, cuando cambia el valor en otro indice)
       if (bms_variable_info.alert) {
-        if (bms_variable_info.is_binary && value !== bms_variable_info.default) {
+        if (bms_variable_info.its_binary && value !== bms_variable_info.default) {
           return false
         }
-        if (!bms_variable_info.is_binary && (value < bms_variable_info.limit_inferior || value > bms_variable_info.limit_superior)) {
+        if (!bms_variable_info.its_binary && (value < bms_variable_info.limit_inferior || value > bms_variable_info.limit_superior)) {
           return false
         }
       }
       return true
+    },
+    get_message (bms_variable_info, index, value) {
+      if (index !== 14) {
+        return bms_variable_info.message
+      }
+      return bms_variable_info.message + bms_variable_info.caption[value]
     },
     triggerWarning (msg, color) {
       this.$q.notify({
@@ -67,7 +73,7 @@ export default {
         color: color,
         textColor: 'white'
         // actions: [
-        //    { label: 'Ir al banco', color: 'white', handler: () => { /* ... */ } } Para ir a la vista asociada al error y cambiarle el css al elemento HTML del error (getElementById), tal vez es otra variable que deberiamos guardar en el store
+        //    { label: 'Ir al banco', color: 'white', handler: () => { /* ... */ } } Para ir a la vista asociada al error y cambiarle el css al elemento HTML del error (getElementById)
         //  ]
         // group: '' Se supone que las que son iguales se están agrupando por default, pero si queremos ser más específicos podemos ocupar estas propiedades
         // badgeColor: '',
@@ -77,9 +83,9 @@ export default {
     }
   }
 }
-// Iconos --> Revisan el bms y se mantiene prendido/apagado (por mientras usar cualquier SVG cuadrado)
-// Agregar todas las variables (quedé en el fault code: armar ese diccionario y hardcodear)
-// Action --> handler
 // Comparar con array bms anterior
+// Action --> handler
+// Agregar todas las variables (quedé en la variable 14)
 // Terminar la estética (urgente: tamaño)
+// Iconos --> Revisar el bms y mantener prendido/apagado (por mientras usar cualquier SVG)
 </script>

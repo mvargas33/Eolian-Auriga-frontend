@@ -129,31 +129,40 @@ const alert_store = {
     message: 'Fan on.',
     color: null
   },
+  14: {
+    alert: true,
+    its_binary: true,
+    default: 0,
+    limit_inferior: 1,
+    limit_superior: 19,
+    message: 'Fault code: ',
+    caption:
+    {
+      1: 'Driving off while plugged in.',
+      2: 'Interlock is tripped.',
+      3: 'Communication fault with a bank or cell.',
+      4: 'Charge overcurrent.',
+      5: 'Discharge overcurrent.',
+      6: 'Over-temperature.',
+      7: 'Under voltage.',
+      8: 'Over voltage.',
+      9: 'No battery voltage.',
+      10: 'High voltage B- leak to chassis.',
+      11: 'High voltage B+ leak to chassis.',
+      12: 'Relay K1 is shorted.',
+      13: 'Contactor K2 is shorted.',
+      14: 'Contactor K3 is shorted.',
+      15: 'Open K1 or K3, or shorted K2.',
+      16: 'Open K2.',
+      17: 'Excessive precharge time.',
+      18: 'EEPROM stack overflow.',
+      19: 'Loss of CAN from HVFE.'
+    },
+    color: 'red'
+  },
   bms_alert_text: {
     'Byte of flags':
         {
-        },
-    'Fault code':
-        {
-          1: 'Driving off while plugged in.',
-          2: 'Interlock is tripped.',
-          3: 'Communication fault with a bank or cell.',
-          4: 'Charge overcurrent.',
-          5: 'Discharge overcurrent.',
-          6: 'Over-temperature.',
-          7: 'Under voltage.',
-          8: 'Over voltage.',
-          9: 'No battery voltage.',
-          10: 'High voltage B- leak to chassis.',
-          11: 'High voltage B+ leak to chassis.',
-          12: 'Relay K1 is shorted.',
-          13: 'Contactor K2 is shorted.',
-          14: 'Contactor K3 is shorted.',
-          15: 'Open K1 or K3, or shorted K2.',
-          16: 'Open K2.',
-          17: 'Excessive precharge time.',
-          18: 'EEPROM stack overflow.',
-          19: 'Loss of CAN from HVFE.'
         },
     'Level fault flags':
         {

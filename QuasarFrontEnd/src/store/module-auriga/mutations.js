@@ -19,8 +19,8 @@ export function updateBms (state, array) {
 
 export function testBMS (state) {
   var new_val = Math.round(Math.random())
-  var new_val2 = Math.round(Math.random())
+  var new_val2 = Math.round(Math.random() * 19)
   Vue.set(state.bms, 0, new_val)
-  Vue.set(state.bms, 4, new_val2)
+  Vue.set(state.bms, 14, new_val2)
   // console.log(state.bms)
 }
