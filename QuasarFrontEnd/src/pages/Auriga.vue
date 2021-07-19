@@ -10,6 +10,9 @@
       <div class="row">
         <Menu></Menu>
       </div>
+      <div class="row">
+        <Notificacion></Notificacion>
+      </div>
     </div>
   </q-page>
 </template>
@@ -18,9 +21,10 @@
 import Principal from '../components/Auriga/Principal'
 import Temperaturas from '../components/Auriga/Temperaturas'
 import Menu from '../components/Auriga/Menu'
+import Notificacion from '../components/Auriga/Notificaciones'
 
 export default {
   name: 'Auriga',
-  components: { Principal, Temperaturas, Menu }
+  components: { Principal, Temperaturas, Menu, Notificacion }
 }
 </script>
