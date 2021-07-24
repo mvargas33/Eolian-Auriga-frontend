@@ -26,17 +26,17 @@ module.exports = {
   ],
 
   globals: {
-    'ga': true, // Google Analytics
-    'cordova': true,
-    '__statics': true,
-    'process': true,
-    'Capacitor': true,
-    'chrome': true
+    ga: true, // Google Analytics
+    cordova: true,
+    __statics: true,
+    process: true,
+    Capacitor: true,
+    chrome: true
   },
 
   // add your custom rules here
   rules: {
-    'camelcase': 'off',
+    camelcase: 'off',
     // allow async-await
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
