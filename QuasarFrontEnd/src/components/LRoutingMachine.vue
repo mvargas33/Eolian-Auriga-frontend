@@ -98,7 +98,8 @@ export default {
           routeDragInterval,
           waypointMode,
           useZoomParameter,
-          showAlternatives
+          showAlternatives,
+          geocoder
         } = this
         const options = {
           waypoints,
@@ -109,7 +110,8 @@ export default {
           routeDragInterval,
           waypointMode,
           useZoomParameter,
-          showAlternatives
+          showAlternatives,
+          geocoder
         }
         const { mapObject } = this.parentContainer
         const routingLayer = L.Routing.control(options)

@@ -6,12 +6,20 @@
       </div>
       <div class="col-12 map-container">
         <q-card style="height: 500px;">
-          <l-map style="height: 100%; width: 100%" :zoom="zoom" :center="center">
+          <l-map ref="AurigaMap"  style="height: 100%; width: 100%" :zoom="zoom" :center="center">
             <l-tile-layer :url="url" :attribution="attribution">
               <slot v-if="ready"></slot>
             </l-tile-layer>
-            <l-routing-machine :waypoints="waypoints" :language="language"/>
-            <l-marker :lat-lng="[lat, lon]" :icon="icon"> </l-marker>
+            <l-routing-machine
+              :routeWhileDragging="true"
+              :waypoints="waypoints"
+              :language="language"
+              :geocoder="geocoder"
+              />
+            <l-marker :lat-lng="[lat, lon]"></l-marker>
+            <l-control position="bottomleft" >
+              <q-btn round color="secondary" icon="my_location" @click="centerView" />
+            </l-control>
           </l-map>
         </q-card>
       </div>
@@ -22,9 +30,10 @@
   </q-page>
 </template>
 <script>
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
+import { LMap, LTileLayer, LMarker, LControl } from 'vue2-leaflet'
 import LRoutingMachine from '../components/LRoutingMachine'
-import L from 'leaflet'
+import * as L from 'leaflet'
+import 'leaflet-control-geocoder'
 import 'leaflet/dist/leaflet.css'
 import PrincipalResumen from '../components/Auriga/Principal_Resumen'
 import Menu from '../components/Auriga/Menu'
@@ -37,7 +46,8 @@ export default {
     LMap,
     LTileLayer,
     LMarker,
-    LRoutingMachine
+    LRoutingMachine,
+    LControl
   },
   data () {
     return {
@@ -57,7 +67,20 @@ export default {
         { lat: -33.5177302313585, lng: -70.67869255029777 },
         { lat: -33.4578215, lng: -70.6650448 }
       ],
+      geocoder: L.Control.Geocoder.nominatim({
+        geocodingQueryParams: { countrycodes: 'cl' }
+      }),
       language: 'es'
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.map = this.$refs.map.mapObject
+    })
+  },
+  methods: {
+    centerView () {
+      this.$refs.AurigaMap.mapObject.panTo([-33.5177302313585, -70.67869255029777])
     }
   }
 }
