@@ -7,7 +7,7 @@
 import L from 'leaflet'
 import { IRouter, IGeocoder, LineOptions } from 'leaflet-routing-machine'
 import { findRealParent } from 'vue2-leaflet'
-
+import iconCar from '../assets/Auriga/car.png'
 const props = {
   visible: {
     type: Boolean,
@@ -66,6 +66,15 @@ const props = {
   },
   altLineOptions: {
     type: LineOptions
+  },
+  icon: {
+    type: L.icon,
+    default: L.icon({
+      iconUrl: iconCar,
+      iconSize: [38, 38],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76]
+    })
   }
 }
 export default {
@@ -99,7 +108,9 @@ export default {
           waypointMode,
           useZoomParameter,
           showAlternatives,
-          geocoder
+          geocoder,
+          visible,
+          icon
         } = this
         const options = {
           waypoints,
@@ -111,10 +122,13 @@ export default {
           waypointMode,
           useZoomParameter,
           showAlternatives,
-          geocoder
+          geocoder,
+          visible,
+          icon
         }
         const { mapObject } = this.parentContainer
         const routingLayer = L.Routing.control(options)
+        mapObject.icon = icon
         routingLayer.addTo(mapObject)
         this.layer = routingLayer
       }
@@ -124,6 +138,6 @@ export default {
 </script>
 
 <style>
-  @import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css';
-  @import "./LRoutingMachine.scss";
+@import "../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css";
+@import "./LRoutingMachine.scss";
 </style>
