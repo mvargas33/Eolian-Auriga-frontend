@@ -1,9 +1,9 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/FenixLayout.vue'),
+    component: () => import('layouts/AurigaTempLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Fenix.vue') }
+      { path: '', component: () => import('pages/AurigaTemp.vue') }
     ]
   },
   {
