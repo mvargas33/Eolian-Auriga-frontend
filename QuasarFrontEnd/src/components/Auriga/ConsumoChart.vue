@@ -16,12 +16,12 @@ var chartColors = {
 export default {
   extends: Line,
   computed: {
-    ...mapState('fenix', ['data_grafico_1'])
+    ...mapState('fenix', ['data_grafico_3'])
   },
   watch: {
     // Cada vez que cambia el store se cambia el onRefresh que se queda pegado con el último valor del Store que se le dió a onRefresh,
     // de esta forma, el gráfico mustra el valor anterior hasta que cambie el store y se vuelva a cambiar el onRefresh con el nuevo valor
-    data_grafico_1: function (newValue, oldValue) {
+    data_grafico_3: function (newValue, oldValue) {
       this.$data._chart.options.scales.xAxes[0] = {
         type: 'realtime',
         realtime: {
@@ -35,11 +35,15 @@ export default {
             })
             chart.config.data.datasets[1].data.push({
               x: Date.now(),
-              y: newValue[1] * 10
+              y: newValue[1]
             })
             chart.config.data.datasets[2].data.push({
               x: Date.now(),
-              y: newValue[2] * 10
+              y: newValue[2]
+            })
+            chart.config.data.datasets[3].data.push({
+              x: Date.now(),
+              y: newValue[3]
             })
           }
         }
@@ -53,7 +57,7 @@ export default {
       {
         datasets: [
           {
-            label: 'Velocidad Izquierda',
+            label: 'P-in Izq',
             backgroundColor: chartColors.red,
             borderColor: chartColors.red,
             fill: false,
@@ -62,7 +66,7 @@ export default {
             data: []
           },
           {
-            label: 'Velocidad Derecha',
+            label: 'P-out Izq',
             backgroundColor: chartColors.green,
             borderColor: chartColors.green,
             fill: false,
@@ -71,7 +75,7 @@ export default {
             data: []
           },
           {
-            label: 'Consumo',
+            label: 'P-in Der',
             backgroundColor: chartColors.blue,
             borderColor: chartColors.blue,
             fill: false,
@@ -80,7 +84,7 @@ export default {
             data: []
           },
           {
-            label: 'Paneles',
+            label: 'P-out Der',
             backgroundColor: chartColors.yellow,
             borderColor: chartColors.yellow,
             fill: false,
@@ -96,7 +100,7 @@ export default {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: 'Consumo en Watts'
+          text: 'Potencia [W]'
         },
         scales: {
           xAxes: [
@@ -122,7 +126,7 @@ export default {
             {
               scaleLabel: {
                 display: true,
-                labelString: 'value'
+                labelString: '[W]'
               }
             }
           ]

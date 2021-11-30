@@ -35,11 +35,7 @@ export default {
             })
             chart.config.data.datasets[1].data.push({
               x: Date.now(),
-              y: newValue[1] * 10
-            })
-            chart.config.data.datasets[2].data.push({
-              x: Date.now(),
-              y: newValue[2] * 10
+              y: newValue[1]
             })
           }
         }
@@ -53,7 +49,7 @@ export default {
       {
         datasets: [
           {
-            label: 'Velocidad Izquierda',
+            label: 'Velocidad Der',
             backgroundColor: chartColors.red,
             borderColor: chartColors.red,
             fill: false,
@@ -62,27 +58,9 @@ export default {
             data: []
           },
           {
-            label: 'Velocidad Derecha',
+            label: 'Velocidad Izq',
             backgroundColor: chartColors.green,
             borderColor: chartColors.green,
-            fill: false,
-            cubicInterpolationMode: 'monotone',
-            pointRadius: 0, // No point
-            data: []
-          },
-          {
-            label: 'Consumo',
-            backgroundColor: chartColors.blue,
-            borderColor: chartColors.blue,
-            fill: false,
-            cubicInterpolationMode: 'monotone',
-            pointRadius: 0, // No point
-            data: []
-          },
-          {
-            label: 'Paneles',
-            backgroundColor: chartColors.yellow,
-            borderColor: chartColors.yellow,
             fill: false,
             cubicInterpolationMode: 'monotone',
             pointRadius: 0, // No point
@@ -122,7 +100,7 @@ export default {
             {
               scaleLabel: {
                 display: true,
-                labelString: 'value'
+                labelString: 'Km/h'
               }
             }
           ]

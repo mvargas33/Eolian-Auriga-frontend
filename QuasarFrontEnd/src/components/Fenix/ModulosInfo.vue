@@ -43,7 +43,7 @@
                 </div>
                 <div class="text-center">
                   <div class="allCenter numero">
-                    {{ bms[12] }}
+                    {{ '-' /* bms[12] */ }}
                   </div>
                 </div>
             </div>

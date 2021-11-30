@@ -10,9 +10,9 @@ export default function () {
     mppt2: [0, 1, 2, 3, 4, 5, 6, 7], // 8
     mppt3: [0, 1, 2, 3, 4, 5, 6, 7], // 8
     mppt4: [0, 1, 2, 3, 4, 5, 6, 7], // 8
-
     potencia_mppt: [0, 0, 0, 0], // 4 [pot_mppt1, pot_mppt2, pot_mppt3, pot_mppt4]
-    data_grafico_1: [0, 0, 0], // 3 [Velocidad, Consumo, Paneles IN]
-    data_grafico_2: [0, 0, 0] // 3 [Temp BMS, Temp Kelly_Der, Temp Kelly_Izq]
+    data_grafico_1: [0, 0], // 3 [Velocidad der, Velocidad izq]
+    data_grafico_2: [0, 0, 0], // 3 [Temp BMS, Temp motor_Der, Temp motor_Izq]
+    data_grafico_3: [0, 0, 0, 0] // 3 [Pin_izq, Pout_izq, Pin_der, Pout_der]
   }
 }

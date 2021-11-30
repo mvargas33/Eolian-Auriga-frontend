@@ -26,6 +26,14 @@ export default {
       console.log(data)
       this.$store.dispatch('fenix/updateBms', data)
     },
+    sevcon_izq (data) {
+      console.log(data)
+      this.$store.dispatch('fenix/updateSevconIzq', data)
+    },
+    sevcon_der (data) {
+      console.log(data)
+      this.$store.dispatch('fenix/updateSevconDer', data)
+    },
     bms_temp (data) {
       console.log(data)
       this.$store.dispatch('fenix/updateBmsTemp', data)

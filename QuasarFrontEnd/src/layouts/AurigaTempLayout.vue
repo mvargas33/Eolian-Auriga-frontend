@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <!-- Header -->
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-purple-10">
         <q-toolbar-title> Eolian Áuriga </q-toolbar-title>
       </q-toolbar>
     </q-header>

@@ -25,10 +25,18 @@
                 </div>
                 <div class="">
                     <div class="allCenter numero">
+                        {{ kelly_izq[0] }} <!-- Motor_temp -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Temperatura
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
                         {{ kelly_izq[11] }} <!-- PIN -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PIN
+                        P-in
                     </div>
                 </div>
                 <div class="">
@@ -36,23 +44,23 @@
                         {{ kelly_izq[8] }} <!-- POUT -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PIN OUT
+                        P-out
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[9] }} <!-- Torque -->
+                        {{ kelly_izq[12] }} <!-- Torque -->
                     </div>
                     <div class="allCenter etiqueta">
-                        TORQUE ACTUAL
+                        Torque Actual
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[9] }} <!-- Torque -->
+                        {{ kelly_izq[13] }} <!-- Torque -->
                     </div>
                     <div class="allCenter etiqueta">
-                        TORQUE
+                        Torque Demand
                     </div>
                 </div>
             </div>
@@ -100,7 +108,15 @@
                         {{ kelly_der[10] }} <!-- Motor_temp -->
                     </div>
                     <div class="allCenter etiqueta">
-                        VELOCIDAD
+                        Velocidad
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
+                        {{ kelly_der[0] }} <!-- Motor_temp -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Temperatura
                     </div>
                 </div>
                 <div class="">
@@ -108,7 +124,7 @@
                         {{ kelly_der[11] }} <!-- Kelly_temp -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PIN
+                        P-in
                     </div>
                 </div>
                 <div class="">
@@ -116,23 +132,23 @@
                         {{ kelly_der[8] }} <!-- PWM -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PIN OUT
+                        P-out
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_der[9] }} <!-- EMR -->
+                        {{ kelly_der[12] }} <!-- EMR -->
                     </div>
                     <div class="allCenter etiqueta">
-                        TORQUE ACTUAL
+                        Torque Actual
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_der[9] }} <!-- EMR -->
+                        {{ kelly_der[13] }} <!-- EMR -->
                     </div>
                     <div class="allCenter etiqueta">
-                        TORQUE
+                        Torque Demand
                     </div>
                 </div>
             </div>

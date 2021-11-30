@@ -36,7 +36,15 @@ export function updateKellyIzq (context, array) {
 }
 
 export function updateBms (context, array) {
-  context.commit('updateBms', array)
+  context.commit('updateBmsAuriga', array)
+}
+
+export function updateSevconDer (context, array) {
+  context.commit('updateSevconDer', array)
+}
+
+export function updateSevconIzq (context, array) {
+  context.commit('updateSevconIzq', array)
 }
 
 export function updateBmsTemp (context, array) {
