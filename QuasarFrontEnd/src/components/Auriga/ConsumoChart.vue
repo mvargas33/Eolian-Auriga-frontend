@@ -57,7 +57,7 @@ export default {
       {
         datasets: [
           {
-            label: 'P-in Izq',
+            label: 'P-in Master',
             backgroundColor: chartColors.red,
             borderColor: chartColors.red,
             fill: false,
@@ -66,7 +66,7 @@ export default {
             data: []
           },
           {
-            label: 'P-out Izq',
+            label: 'P-out Master',
             backgroundColor: chartColors.green,
             borderColor: chartColors.green,
             fill: false,
@@ -75,7 +75,7 @@ export default {
             data: []
           },
           {
-            label: 'P-in Der',
+            label: 'P-in Slave',
             backgroundColor: chartColors.blue,
             borderColor: chartColors.blue,
             fill: false,
@@ -84,7 +84,7 @@ export default {
             data: []
           },
           {
-            label: 'P-out Der',
+            label: 'P-out Slave',
             backgroundColor: chartColors.yellow,
             borderColor: chartColors.yellow,
             fill: false,

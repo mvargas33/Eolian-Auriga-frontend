@@ -62,7 +62,7 @@ export default {
             data: []
           },
           {
-            label: 'Motor Der',
+            label: 'Motor Slave',
             backgroundColor: chartColors.purple,
             borderColor: chartColors.purple,
             fill: false,
@@ -71,7 +71,7 @@ export default {
             data: []
           },
           {
-            label: 'Motor Izq',
+            label: 'Motor Master',
             backgroundColor: chartColors.green,
             borderColor: chartColors.green,
             fill: false,

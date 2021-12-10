@@ -49,7 +49,7 @@ export default {
       {
         datasets: [
           {
-            label: 'Velocidad Der',
+            label: 'Velocidad Slave',
             backgroundColor: chartColors.red,
             borderColor: chartColors.red,
             fill: false,
@@ -58,7 +58,7 @@ export default {
             data: []
           },
           {
-            label: 'Velocidad Izq',
+            label: 'Velocidad Master',
             backgroundColor: chartColors.green,
             borderColor: chartColors.green,
             fill: false,

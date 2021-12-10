@@ -8,6 +8,11 @@
             <!-- Panel izquierdo -->
             <div class="col">
                 <div class="">
+                    <div class="allCenter etiqueta">
+                        Master
+                    </div>
+                </div>
+                <div class="">
                     <div class="allCenter numero">
                         {{ kelly_izq[6] }} <!-- RPM -->
                     </div>
@@ -95,6 +100,11 @@
             </div>
             <!-- Panel derecho -->
             <div class="col">
+                <div class="">
+                    <div class="allCenter etiqueta">
+                        Slave
+                    </div>
+                </div>
                 <div class="">
                     <div class="allCenter numero">
                         {{ kelly_der[6] }} <!-- RPM -->
