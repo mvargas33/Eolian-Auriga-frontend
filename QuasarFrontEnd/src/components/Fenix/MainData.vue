@@ -8,6 +8,11 @@
             <!-- Panel izquierdo -->
             <div class="col">
                 <div class="">
+                    <div class="allCenter etiqueta">
+                        Master
+                    </div>
+                </div>
+                <div class="">
                     <div class="allCenter numero">
                         {{ kelly_izq[6] }} <!-- RPM -->
                     </div>
@@ -17,34 +22,50 @@
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[10] }} <!-- Motor_temp -->
+                        {{ kelly_izq[10] }} <!-- Velocidad -->
                     </div>
                     <div class="allCenter etiqueta">
-                        T°Motor
+                        Velocidad
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[11] }} <!-- Kelly_temp -->
+                        {{ kelly_izq[0] }} <!-- Motor_temp -->
                     </div>
                     <div class="allCenter etiqueta">
-                        T°Kelly
+                        Temperatura
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[8] }} <!-- PWM -->
+                        {{ kelly_izq[11] }} <!-- PIN -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PWM
+                        P-in
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_izq[9] }} <!-- EMR -->
+                        {{ kelly_izq[8] }} <!-- POUT -->
                     </div>
                     <div class="allCenter etiqueta">
-                        EMR
+                        P-out
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
+                        {{ kelly_izq[12] }} <!-- Torque -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Torque Actual
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
+                        {{ kelly_izq[13] }} <!-- Torque -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Torque Demand
                     </div>
                 </div>
             </div>
@@ -80,6 +101,11 @@
             <!-- Panel derecho -->
             <div class="col">
                 <div class="">
+                    <div class="allCenter etiqueta">
+                        Slave
+                    </div>
+                </div>
+                <div class="">
                     <div class="allCenter numero">
                         {{ kelly_der[6] }} <!-- RPM -->
                     </div>
@@ -92,7 +118,15 @@
                         {{ kelly_der[10] }} <!-- Motor_temp -->
                     </div>
                     <div class="allCenter etiqueta">
-                        T°Motor
+                        Velocidad
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
+                        {{ kelly_der[0] }} <!-- Motor_temp -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Temperatura
                     </div>
                 </div>
                 <div class="">
@@ -100,7 +134,7 @@
                         {{ kelly_der[11] }} <!-- Kelly_temp -->
                     </div>
                     <div class="allCenter etiqueta">
-                        T°Kelly
+                        P-in
                     </div>
                 </div>
                 <div class="">
@@ -108,15 +142,23 @@
                         {{ kelly_der[8] }} <!-- PWM -->
                     </div>
                     <div class="allCenter etiqueta">
-                        PWM
+                        P-out
                     </div>
                 </div>
                 <div class="">
                     <div class="allCenter numero">
-                        {{ kelly_der[9] }} <!-- EMR -->
+                        {{ kelly_der[12] }} <!-- EMR -->
                     </div>
                     <div class="allCenter etiqueta">
-                        EMR
+                        Torque Actual
+                    </div>
+                </div>
+                <div class="">
+                    <div class="allCenter numero">
+                        {{ kelly_der[13] }} <!-- EMR -->
+                    </div>
+                    <div class="allCenter etiqueta">
+                        Torque Demand
                     </div>
                 </div>
             </div>

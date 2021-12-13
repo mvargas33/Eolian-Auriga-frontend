@@ -6,7 +6,12 @@ const HashMap = require('hashmap');
 
 const app = require('express')() // Servidor
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, {
+    cors: {
+        origin: "http://localhost:8080",
+        methods: ["GET", "POST"]
+      }
+});
 
 const port = process.env.PORT || 3000 // Puerto del servidor
 
@@ -43,7 +48,8 @@ while(true){
 
 io.on('connection', function(socket) {
     console.log('A user connected');
-
+    console.log(socket.id);
+    io.emit("evento", socket.id);
     socket.on('disconnect', () => {
         console.log('A user disconnected');
     })

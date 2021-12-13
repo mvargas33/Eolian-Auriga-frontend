@@ -12,7 +12,7 @@
                 <div class="row text-center">
                   <div class="col">
                     <div class="allCenter numero">
-                    {{ bms[8] }}
+                    {{ bms[8]  + 1}}
                     </div>
                   </div>
                   <div class="numero">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="text-center">
                   <div class="allCenter numero">
-                    {{ bms[12] }}
+                    {{ '-' /* bms[12] */ }}
                   </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="row text-center">
                   <div class="col">
                     <div class="allCenter numero">
-                    {{ bms[10] }}
+                    {{ bms[10] + 1 }}
                   </div>
                   </div>
                   <div class="numero">
