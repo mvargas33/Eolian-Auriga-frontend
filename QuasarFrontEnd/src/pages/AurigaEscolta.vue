@@ -32,6 +32,9 @@
         <!-- Banco de baterías -->
         <BancoBaterias></BancoBaterias>
       </div>
+      <div class="row">
+        <Menu></Menu>
+      </div>
     </div>
   </q-page>
 </template>
@@ -42,6 +45,7 @@ import { mapState, mapMutations } from 'vuex'
 import MainData from '../components/Fenix/MainData'
 import SocBar from '../components/Fenix/SocBar'
 import BMSInfo from '../components/Fenix/BMSInfo'
+import Menu from '../components/Auriga/Menu.vue'
 
 import ConsumoChart from '../components/Auriga/ConsumoChart'
 import TempChart from '../components/Auriga/TempChart'
@@ -60,7 +64,8 @@ export default {
     TempChart,
     ModulosInfo,
     BancoBaterias,
-    PinChart
+    PinChart,
+    Menu
   },
   computed: {
     ...mapState('fenix', ['mainData']),

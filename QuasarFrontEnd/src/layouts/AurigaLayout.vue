@@ -92,8 +92,8 @@ const menuList = [
   },
   {
     icon: {
-      icon: 'explore',
-      label: 'Settings',
+      icon: 'map',
+      label: 'Explore',
       separator: false
     },
     label: 'Navegación',
@@ -107,6 +107,15 @@ const menuList = [
     },
     label: 'Gráficos',
     link: 'graphs'
+  },
+  {
+    icon: {
+      icon: 'fas fa-exclamation-triangle',
+      label: 'Warning',
+      separator: false
+    },
+    label: 'Alarmas',
+    link: 'alarmas'
   },
   {
     icon: {
