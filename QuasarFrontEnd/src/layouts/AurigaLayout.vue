@@ -5,23 +5,21 @@
         <q-header elevated class="bg-purple-10">
             <q-toolbar >
                 <q-btn
-                flat
-                dense
-                round
-                icon="menu"
-                aria-label="Menu"
-                @click="leftDrawerOpen = !leftDrawerOpen"
+                  flat
+                  dense
+                  round
+                  icon="menu"
+                  aria-label="Menu"
+                  @click="leftDrawerOpen = !leftDrawerOpen"
                 />
-                <q-toolbar-title>
-                Eolian Áuriga
-                </q-toolbar-title>
+                <q-toolbar-title> Eolian Áuriga </q-toolbar-title>
                 <q-btn
-                :loading="loading2"
-                :percentage="percentage2"
-                round
-                :color="darkMode ? 'purple-10' : 'purple-10'"
-                @click="turnDarkMode()"
-                :icon="darkMode ? 'o_dark_mode' : 'dark_mode'"
+                  :loading="loading2"
+                  :percentage="percentage2"
+                  round
+                  :color="darkMode ? 'purple-10' : 'purple-10'"
+                  @click="turnDarkMode()"
+                  :icon="darkMode ? 'o_dark_mode' : 'dark_mode'"
                 >
                 </q-btn>
             </q-toolbar>
@@ -36,14 +34,13 @@
             :content-class="darkModeClass(darkMode)"
         >
             <template v-for="(menuItem, index) in menuList">
-                <q-item :key="index" clickable v-ripple
-                >
-                <q-item-section avatar>
-                  <q-icon :name="menuItem.icon.icon" />
-                </q-item-section>
-                <q-item-section>
-                  {{menuItem.label}}
-                </q-item-section>
+                <q-item :to="menuItem.link" :key="index" clickable v-ripple>
+                  <q-item-section avatar>
+                    <q-icon :name="menuItem.icon.icon" />
+                  </q-item-section>
+                  <q-item-section>
+                    {{menuItem.label}}
+                  </q-item-section>
                 </q-item>
             </template>
         </q-drawer>
@@ -63,7 +60,8 @@ const menuList = [
       size: 'xl',
       separator: true
     },
-    label: 'Principal'
+    label: 'Principal',
+    link: 'auriga'
   },
   {
     icon: {
@@ -71,15 +69,17 @@ const menuList = [
       label: 'Outbox',
       separator: false
     },
-    label: 'Baterías'
+    label: 'Baterías',
+    link: 'aurigabaterias'
   },
   {
     icon: {
-      icon: 'brightness_5',
+      icon: 'fas fa-solar-panel',
       label: 'Trash',
       separator: false
     },
-    label: 'Paneles solares'
+    label: 'Paneles solares',
+    link: 'paneles'
   },
   {
     icon: {
@@ -87,7 +87,8 @@ const menuList = [
       label: 'Spam',
       separator: true
     },
-    label: 'Motores'
+    label: 'Motores',
+    link: 'motores'
   },
   {
     icon: {
@@ -95,7 +96,26 @@ const menuList = [
       label: 'Settings',
       separator: false
     },
-    label: 'Navegación'
+    label: 'Navegación',
+    link: 'map'
+  },
+  {
+    icon: {
+      icon: 'fas fa-chart-bar',
+      label: 'Graph',
+      separator: false
+    },
+    label: 'Gráficos',
+    link: 'graphs'
+  },
+  {
+    icon: {
+      icon: 'fas fa-car',
+      label: 'Car',
+      separator: false
+    },
+    label: 'Escolta',
+    link: 'escolta'
   }
 ]
 

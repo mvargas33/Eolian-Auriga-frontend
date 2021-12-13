@@ -1,9 +1,17 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/AurigaTempLayout.vue'),
+    component: () => import('layouts/AurigaLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/AurigaTemp.vue') }
+      { path: '/', component: () => import('pages/Auriga.vue') },
+      { path: '/auriga', component: () => import('pages/Auriga.vue') }
+    ]
+  },
+  {
+    path: '/escolta',
+    component: () => import('layouts/AurigaLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/AurigaEscolta.vue') }
     ]
   },
   {
@@ -18,13 +26,6 @@ const routes = [
     component: () => import('layouts/EmptyLayout.vue'),
     children: [
       { path: '', component: () => import('pages/FenixBasic.vue') }
-    ]
-  },
-  {
-    path: '/auriga',
-    component: () => import('layouts/AurigaLayout.vue'),
-    children: [
-      { path: '/auriga', component: () => import('pages/Auriga.vue') }
     ]
   },
   {
