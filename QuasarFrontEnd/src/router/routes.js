@@ -53,7 +53,14 @@ const routes = [
     path: '/baterias',
     component: () => import('layouts/AurigaLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/AurigaBaterias.vue') }
+      { path: '', component: () => import('pages/AurigaBaterias.vue') }
+    ]
+  },
+  {
+    path: '/pilot',
+    component: () => import('layouts/Auriga-PilotLayout.vue'),
+    children: [
+      { path: '/', component: () => import('pages/Pilot.vue') }
     ]
   }
 ]
@@ -62,7 +69,10 @@ const routes = [
 if (process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
-    component: () => import('pages/Error404.vue')
+    component: () => import('layouts/AurigaLayout.vue'),
+    children: [
+      { path: '/', component: () => import('pages/Error404.vue') }
+    ]
   })
 }
 

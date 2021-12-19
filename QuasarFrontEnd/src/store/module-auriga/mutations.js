@@ -16,3 +16,11 @@ export function updateBms (state, array) {
   // Update del gráfico
   // Vue.set(state.data_grafico_2, 0, state.bms[11]) // Average Temp BMS
 }
+
+export function testBMS (state) {
+  var new_val = Math.round(Math.random())
+  var new_val2 = Math.round(Math.random() * 19)
+  Vue.set(state.bms, 0, new_val)
+  Vue.set(state.bms, 14, new_val2)
+  // console.log(state.bms)
+}
