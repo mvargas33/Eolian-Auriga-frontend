@@ -70,7 +70,7 @@ const menuList = [
       separator: false
     },
     label: 'Baterías',
-    link: 'aurigabaterias'
+    link: 'baterias'
   },
   {
     icon: {

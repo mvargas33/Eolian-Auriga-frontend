@@ -50,10 +50,10 @@ const routes = [
     ]
   },
   {
-    path: '/aurigabaterias',
+    path: '/baterias',
     component: () => import('layouts/AurigaLayout.vue'),
     children: [
-      { path: '/aurigabaterias', component: () => import('pages/AurigaBaterias.vue') }
+      { path: '/', component: () => import('pages/AurigaBaterias.vue') }
     ]
   }
 ]

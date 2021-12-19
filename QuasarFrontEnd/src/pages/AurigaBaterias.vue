@@ -153,6 +153,9 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <Menu></Menu>
+        </div>
     </div>
 </template>
 
@@ -161,6 +164,7 @@
 import AlertasSuperiores from '../components/Auriga/AlertasSuperiores'
 import AlertasInferiores from '../components/Auriga/AlertasInferiores'
 import Marcha from '../components/Auriga/Marcha'
+import Menu from '../components/Auriga/Menu'
 /* Métodos para interpolar colores en RGB o HSL. Source: https://codepen.io/njmcode/pen/axoyD/ */
 
 // // Converts a #ffffff hex string into an [r,g,b] array
@@ -258,7 +262,7 @@ export default {
       progress: '0.5'
     }
   },
-  components: { AlertasSuperiores, AlertasInferiores, Marcha },
+  components: { AlertasSuperiores, AlertasInferiores, Marcha, Menu },
   name: 'BancoBaterias',
   computed: {
     ...mapState('fenix', ['bms_volt', 'bms_temp']),

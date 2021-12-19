@@ -4,11 +4,11 @@
             <q-space />
             <q-btn size="30px" flat round dense icon="inbox" type="a" href="/auriga" />
             <q-space />
-            <q-btn size="30px" flat round dense icon="battery_charging_full" href="/baterias" />
+            <q-btn size="30px" flat round dense icon="battery_charging_full" type="a" href="/baterias" />
             <q-space />
-            <q-btn size="30px" flat round dense icon="fas fa-solar-panel" href="/paneles" />
+            <q-btn size="30px" flat round dense icon="fas fa-solar-panel" type="a" href="/paneles" />
             <q-space />
-            <q-btn size="30px" flat round dense icon="offline_bolt" href="/motores" />
+            <q-btn size="30px" flat round dense icon="offline_bolt" type="a" href="/motores" />
             <q-space />
             <q-btn size="30px" flat round dense icon="map" type="a" href="/map" />
             <q-space />
