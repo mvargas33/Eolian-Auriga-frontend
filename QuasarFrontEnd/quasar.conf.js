@@ -45,7 +45,7 @@ module.exports = function (ctx) {
       //            (not treeshaking Quasar; biggest bundle size; convenient)
       all: 'auto',
 
-      components: [ 'QLinearProgress' ],
+      components: ['QLinearProgress'],
       directives: [],
 
       // Quasar plugins
@@ -77,7 +77,8 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /node_modules/,
           options: {
-            formatter: require('eslint').CLIEngine.getFormatter('stylish')
+            formatter: require('eslint').CLIEngine.getFormatter('stylish'),
+            fix: true
           }
         })
       }

@@ -1,0 +1,72 @@
+{
+    "zone": "Centro",
+    "branch": "COPEX VOLTEX",
+    "ubication": [
+        {
+            "direction": " MARBELLA - Ruta F30E S/N Lote Cc4",
+            "lat": -32.6713581,
+            "lng": -71.4282548,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "HIJUELAS - Panamericana Norte Km 10",
+            "lat": -32.8276163,
+            "lng": -71.1328591,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg" 
+        },
+        {
+            "direction": "LLAY LLAY - Panamericana Norte Km 90",
+            "lat": -32.84224,
+            "lng": -71.0062556,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "VIÑA DEL MAR - Av. Libertad Nº 501",
+            "lat": -33.017,
+            "lng": -71.5529943,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "LAMPA - Panamericana Norte Km 27 1/2",
+            "lat": -33.2161944,
+            "lng": -70.7690776,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "VITACURA PONIENTE - Costanera Norte Km 2,5",
+            "lat": -33.3751111,
+            "lng": -70.5340498,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "VITACURA ORIENTE - Km7,65, Eje Oriente-Poniente C. Norte",
+            "lat": -33.3827055,
+            "lng": -70.5916287,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "PUDAHUEL - Costanera Norte Km 33.75",
+            "lat": -33.4343655,
+            "lng": -70.812814,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "TALAGANTE PONIENTE - Ruta 78, Km 31 1/2, Poniente",
+            "lat": -33.6333056,
+            "lng": -70.8712165,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "TALAGANTE ORIENTE - Ruta 78, Km 31 1/2, Oriente",
+            "lat": -33.63525,
+            "lng": -70.8708831,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        },
+        {
+            "direction": "SANTO DOMINGO -Teniente Cruz Martinez 70",
+            "lat": -33.6463333,
+            "lng": -71.6269109,
+            "image": "https://copecvoltex.cl/content/uploads/2020/12/hero_carga_estaciones-1440x400.jpg"
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 <template>
-    <div>
+     <div class="q-pa-md">
         <q-toolbar class="bg-purple-10 text-white shadow-2 absolute-bottom">
             <q-space />
             <q-btn size="30px" flat round dense icon="inbox" type="a" href="/auriga" />
