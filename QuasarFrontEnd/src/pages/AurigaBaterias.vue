@@ -17,7 +17,7 @@
           </div>
       </div>
       -->
-      <div class="" v-for='(modulo, index) in bms_volt' :key="index" >
+      <div class="" v-for='index in 28' :key="index" >
           <div class="row padding-1" v-if="index % 5 === 0">
             <div class="col">
               <div class="row">
@@ -26,15 +26,15 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[index*2])">
-                      {{ bms_temp[index*2] }} <!-- Primer Termistor son los pares (0 en a 58) -->
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+111-1])">
+                      {{ bms[index+111-1] }} <!-- Primer Termistor son los pares (0 en a 58) -->
                     </div>
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[index*2 + 1])">
-                      {{ bms_temp[index*2 + 1] }} <!-- Segundo Termistor son los impares (1 a 59) -->
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+83-1])">
+                      {{ bms[index+83-1] }} <!-- Segundo Termistor son los impares (1 a 59) -->
                     </div>
                   </div>
-                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms_volt[(index)])">
-                    {{ bms_volt[index] }} <!-- Módulo va a la par con el índice -->
+                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms[index+55-1])">
+                    {{ bms[index+55-1] }} <!-- Módulo va a la par con el índice -->
                   </div>
                 </div>
               </div>
@@ -46,15 +46,15 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 1)*2])">
-                      {{ bms_temp[(index + 1)*2] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+111-1+1])">
+                      {{ bms[index+111-1+1] }}
                     </div>
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 1)*2 + 1])">
-                      {{ bms_temp[(index + 1)*2 + 1] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+83-1+1])">
+                      {{ bms[index+83-1+1] }}
                     </div>
                   </div>
-                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms_volt[(index + 1)])">
-                    {{ bms_volt[(index + 1)] }}
+                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms[index+55-1+1])">
+                    {{ bms[index+55-1+1] }}
                   </div>
                 </div>
               </div>
@@ -66,15 +66,15 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 2)*2])">
-                      {{ bms_temp[(index + 2)*2] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+111-1+2])">
+                      {{ bms[index+111-1+2] }}
                     </div>
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 2)*2 + 1])">
-                      {{ bms_temp[(index + 2)*2 + 1] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+83-1+2])">
+                      {{ bms[index+83-1+2] }}
                     </div>
                   </div>
-                    <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms_volt[(index + 2)])">
-                    {{ bms_volt[(index + 2)] }}
+                    <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms[index+55-1+2])">
+                    {{ bms[index+55-1+2] }}
                   </div>
                 </div>
               </div>
@@ -86,15 +86,15 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 3)*2])">
-                      {{ bms_temp[(index + 3)*2] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+111-1+3])">
+                      {{ bms[index+111-1+3] }}
                     </div>
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 3)*2 + 1])">
-                      {{ bms_temp[(index + 3)*2 + 1] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+83-1+3])">
+                      {{ bms[index+83-1+3] }}
                     </div>
                   </div>
-                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms_volt[(index + 3)])">
-                    {{ bms_volt[(index + 3)] }}
+                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms[index+55-1+3])">
+                    {{ bms[index+55-1+3] }}
                   </div>
                 </div>
               </div>
@@ -106,15 +106,15 @@
                 </div>
                 <div class="col">
                   <div class="row">
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 4)*2])">
-                      {{ bms_temp[(index + 4)*2] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+111-1+4])">
+                      {{ bms[index+111-1+4] }}
                     </div>
-                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms_temp[(index + 4)*2 + 1])">
-                      {{ bms_temp[(index + 4)*2 + 1] }}
+                    <div class="col allCenter" :style="hslInterpolationTEMPERATURA(bms[index+83-1+4])">
+                      {{ bms[index+83-1+4] }}
                     </div>
                   </div>
-                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms_volt[(index + 4)])">
-                    {{ bms_volt[(index + 4)] }}
+                  <div class="text-center numero" :style="rgbInterpolationVOLTAJE(bms[index+55-1+4])">
+                    {{ bms[index+55-1+4] }}
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@ export default {
   name: 'BancoBaterias',
   components: { PrincipalResumen, Menu },
   computed: {
-    ...mapState('fenix', ['bms_volt', 'bms_temp']),
+    ...mapState('auriga', ['bms']),
     minBatteries () {
       return 'minimoBat'
     },
