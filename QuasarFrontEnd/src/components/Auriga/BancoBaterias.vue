@@ -1,7 +1,7 @@
 <template>
   <div class="padding-5">
     <!-- <q-btn color="white" text-color="black" label="Change Modulo 1" @click="updateModulo(0)"/> -->
-    <div class="" v-for="(modulo, index) in bms_volt" :key="index">
+    <div class="" v-for="index in 28" :key="index">
       <div class="row padding-1" v-if="index % 3 === 0">
         <div class="col">
           <div class="row">
@@ -13,24 +13,24 @@
               <div class="row">
                 <div
                   class="col allCenter"
-                  :style="hslInterpolationTEMPERATURA(bms_temp[index * 2])"
+                  :style="hslInterpolationTEMPERATURA(bms[index+111-1])"
                 >
-                  {{ bms_temp[index * 2] }}
+                  {{ bms[index+111-1] }}
                   <!-- Primer Termistor son los pares (0 en a 58) -->
                 </div>
                 <div
                   class="col allCenter"
-                  :style="hslInterpolationTEMPERATURA(bms_temp[index * 2 + 1])"
+                  :style="hslInterpolationTEMPERATURA(bms[index+83-1])"
                 >
-                  {{ bms_temp[index * 2 + 1] }}
+                  {{ bms[index+83-1] }}
                   <!-- Segundo Termistor son los impares (1 a 59) -->
                 </div>
               </div>
               <div
                 class="text-center numero"
-                :style="rgbInterpolationVOLTAJE(bms_volt[index])"
+                :style="rgbInterpolationVOLTAJE(bms[index+55-1])"
               >
-                {{ bms_volt[index] }}
+                {{ bms[index+55-1] }}
                 <!-- Módulo va a la par con el índice -->
               </div>
             </div>
@@ -46,25 +46,25 @@
                 <div
                   class="col allCenter"
                   :style="
-                    hslInterpolationTEMPERATURA(bms_temp[(index + 1) * 2])
+                    hslInterpolationTEMPERATURA(bms[index+111-1+1])
                   "
                 >
-                  {{ bms_temp[(index + 1) * 2] }}
+                  {{ bms[index+111-1+1] }}
                 </div>
                 <div
                   class="col allCenter"
                   :style="
-                    hslInterpolationTEMPERATURA(bms_temp[(index + 1) * 2 + 1])
+                    hslInterpolationTEMPERATURA(bms[index+83-1+1])
                   "
                 >
-                  {{ bms_temp[(index + 1) * 2 + 1] }}
+                  {{ bms[index+83-1+1] }}
                 </div>
               </div>
               <div
                 class="text-center numero"
-                :style="rgbInterpolationVOLTAJE(bms_volt[index + 1])"
+                :style="rgbInterpolationVOLTAJE(bms[index+55-1+1])"
               >
-                {{ bms_volt[index + 1] }}
+                {{ bms[index+55-1+1] }}
               </div>
             </div>
           </div>
@@ -79,25 +79,25 @@
                 <div
                   class="col allCenter"
                   :style="
-                    hslInterpolationTEMPERATURA(bms_temp[(index + 2) * 2])
+                    hslInterpolationTEMPERATURA(bms[index+111-1+2])
                   "
                 >
-                  {{ bms_temp[(index + 2) * 2] }}
+                  {{ bms[index+111-1+2] }}
                 </div>
                 <div
                   class="col allCenter"
                   :style="
-                    hslInterpolationTEMPERATURA(bms_temp[(index + 2) * 2 + 1])
+                    hslInterpolationTEMPERATURA(bms[index+83-1+2])
                   "
                 >
-                  {{ bms_temp[(index + 2) * 2 + 1] }}
+                  {{ bms[index+83-1+2] }}
                 </div>
               </div>
               <div
                 class="text-center numero"
-                :style="rgbInterpolationVOLTAJE(bms_volt[index + 2])"
+                :style="rgbInterpolationVOLTAJE(bms[index+55-1+2])"
               >
-                {{ bms_volt[index + 2] }}
+                {{ bms[index+55-1+2] }}
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'BancoBaterias',
   computed: {
-    ...mapState('fenix', ['bms_volt', 'bms_temp'])
+    ...mapState('auriga', ['bms'])
   },
   methods: {
     ...mapMutations('fenix', ['updateModulo']),
