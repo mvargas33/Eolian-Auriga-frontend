@@ -1,5 +1,5 @@
 <template>
-    <div  style="width:100%">
+    <div  style="width:100%;padding: 0% 1% 0% 1%">
         <!-- <div>
             <AlertasSuperiores></AlertasSuperiores>
         </div> -->
@@ -206,8 +206,21 @@
         <div>
             <AlertasInferiores/>
         </div>
+
         <div>
+            <Mppt/>
+        </div>
+        <div>
+            <BMSVoltTemp/>
+        </div>
+        <!-- <div>
+            <Sevcon/>
+        </div> -->
+        <div style="margin-top: 2%">
             <ConsumoChart/>
+        </div>
+        <div class="row">
+          <Menu/>
         </div>
     </div>
 </template>
@@ -220,11 +233,14 @@ import { VueSvgGauge } from 'vue-svg-gauge'
 import AlertasInferiores from './AlertasInferiores'
 import HeatMap from './HeatMap.vue'
 import ConsumoChart from './ConsumoChart.vue'
+import Mppt from './Mppt.vue'
+import BMSVoltTemp from './BMSVoltTemp.vue'
+import Menu from './Menu.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'Principal',
-  components: { VueSvgGauge, HeatMap, AlertasInferiores, ConsumoChart },
+  components: { VueSvgGauge, HeatMap, AlertasInferiores, ConsumoChart, Mppt, BMSVoltTemp, Menu },
   computed: {
     ...mapState('general', ['darkMode']),
     progressLabel2 () {

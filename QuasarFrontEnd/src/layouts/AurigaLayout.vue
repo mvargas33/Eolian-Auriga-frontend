@@ -2,7 +2,7 @@
 <!-- Layout principal de monitoreo de eolian Áuriga -->
     <q-layout view="hHh Lpr lff" :class="darkModeClass(darkMode)">
         <!-- Header -->
-        <q-header elevated class="bg-purple-10">
+        <!-- <q-header elevated class="bg-purple-10">
             <q-toolbar >
                 <q-btn
                   flat
@@ -14,8 +14,6 @@
                 />
                 <q-toolbar-title> Eolian Áuriga </q-toolbar-title>
                 <q-btn
-                  :loading="loading2"
-                  :percentage="percentage2"
                   round
                   :color="darkMode ? 'purple-10' : 'purple-10'"
                   @click="turnDarkMode()"
@@ -23,10 +21,10 @@
                 >
                 </q-btn>
             </q-toolbar>
-        </q-header>
+        </q-header> -->
 
         <!-- Left Drawer -->
-        <q-drawer
+        <!-- <q-drawer
             v-model="leftDrawerOpen"
             show-if-above="false"
             :breakpoint="0"
@@ -43,7 +41,7 @@
                   </q-item-section>
                 </q-item>
             </template>
-        </q-drawer>
+        </q-drawer> -->
         <q-page-container>
             <router-view />
         </q-page-container>
