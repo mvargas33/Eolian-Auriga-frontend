@@ -16,9 +16,17 @@ var chartColors = {
 export default {
   extends: Line,
   computed: {
-    ...mapState('fenix', ['data_grafico_3'])
+    ...mapState('fenix', ['data_grafico_3']),
+    ...mapState('general', ['darkMode'])
   },
   watch: {
+    darkMode: function (newValue, oldValue) {
+      this.$data._chart.options.title.fontColor = newValue ? 'white' : 'black'
+      this.$data._chart.options.scales.xAxes[0].ticks.fontColor = newValue ? 'white' : 'black'
+      this.$data._chart.options.scales.yAxes[0].ticks.fontColor = newValue ? 'white' : 'black'
+      this.$data._chart.options.scales.yAxes[0].scaleLabel.fontColor = newValue ? 'white' : 'black'
+      this.$data._chart.options.legend.labels.fontColor = newValue ? 'white' : 'black'
+    },
     // Cada vez que cambia el store se cambia el onRefresh que se queda pegado con el último valor del Store que se le dió a onRefresh,
     // de esta forma, el gráfico mustra el valor anterior hasta que cambie el store y se vuelva a cambiar el onRefresh con el nuevo valor
     data_grafico_3: function (newValue, oldValue) {
@@ -100,7 +108,9 @@ export default {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: 'Potencia [W]'
+          text: 'Potencia [kW]',
+          fontColor: 'white',
+          fontSize: 20
         },
         scales: {
           xAxes: [
@@ -115,18 +125,36 @@ export default {
                   chart.config.data.datasets.forEach(function (dataset) {
                     dataset.data.push({
                       x: Date.now(),
-                      y: 0
+                      y: 10
                     })
                   })
                 }
+              },
+              ticks: {
+                fontColor: 'white',
+                fontSize: 10,
+                stepSize: 1,
+                beginAtZero: true
               }
             }
           ],
           yAxes: [
             {
               scaleLabel: {
+                display: false,
+                labelString: '[W]',
+                fontColor: 'white',
+                fontSize: 16
+              },
+              ticks: {
+                fontColor: 'white',
+                fontSize: 10,
+                stepSize: 2,
+                beginAtZero: true
+              },
+              gridLines: {
                 display: true,
-                labelString: '[W]'
+                color: 'grey'
               }
             }
           ]
@@ -140,7 +168,11 @@ export default {
           intersect: false
         },
         legend: {
-          position: 'bottom'
+          position: 'bottom',
+          labels: {
+            fontColor: this.$store.darkmode ? 'black' : 'white',
+            fontSize: 16
+          }
         }
       } // End Options
     ) // End renderChart

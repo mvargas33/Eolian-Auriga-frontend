@@ -57,11 +57,19 @@ align-items: flex-end;
 }
 
 .numero {
-    font-size: 190%;
+    font-size: 200%;
+}
+
+.escala-etiqueta {
+    font-size: 160%;
 }
 
 .biggernumero {
-    font-size: 300%;
+    font-size: 310%;
+}
+
+.velocimetroNumero {
+    font-size: 400%;
 }
 
 .biggertag {
@@ -93,5 +101,13 @@ font-weight: bold;
 }
 
 .alert-icon {
-    font-size: 70px;
+    font-size: 60px;
+}
+
+.heatmapSquare {
+    width: 54.83px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: green;
+    margin: 5px;
 }

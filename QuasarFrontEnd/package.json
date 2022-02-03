@@ -14,7 +14,7 @@
   "dependencies": {
     "@quasar/cli": "^1.2.1",
     "@quasar/extras": "^1.9.13",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "chart.js": "^2.8.0",
     "chartjs-plugin-streaming": "^1.8.0",
     "compass": "^0.1.1",
@@ -41,7 +41,8 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-standard": "^4.1.0",
-    "eslint-plugin-vue": "^6.1.2"
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-svg-loader": "^0.16.0"
   },
   "engines": {
     "node": ">= 10.18.1",

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 
-export function updateBms (state, array) {
+function updateComponent (state, array, n_dec, component_name) {
   // Formateamos a tres decimales para visualizar bien
-  var decimales = 1E3
+  var decimales = n_dec
   var x = 0
   var l = array.length
   while (x < l) {
@@ -11,10 +11,23 @@ export function updateBms (state, array) {
   }
 
   // Cambiamos el state
-  Vue.set(state, 'bms', [...array]) // [...array] Copiamos para prevenir cambios de terceros
+  Vue.set(state, component_name, [...array]) // [...array] Copiamos para prevenir cambios de terceros
+}
 
-  // Update del gráfico
-  // Vue.set(state.data_grafico_2, 0, state.bms[11]) // Average Temp BMS
+export function updateBms (state, array) {
+  updateComponent(state, array, 1E3, 'bms')
+}
+
+export function updateSevcon (state, array) {
+  updateComponent(state, array, 1E1, 'sevcon')
+}
+
+export function updateMppt1 (state, array) {
+  updateComponent(state, array, 1E1, 'mppt1')
+}
+
+export function updateMppt2 (state, array) {
+  updateComponent(state, array, 1E1, 'mppt2')
 }
 
 export function testBMS (state) {

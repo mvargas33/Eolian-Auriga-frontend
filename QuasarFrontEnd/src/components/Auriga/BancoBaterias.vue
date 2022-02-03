@@ -179,7 +179,7 @@ var _interpolateHSL = function (color1, color2, factor) {
   return hsl2rgb(hsl1)
 }
 
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'BancoBaterias',
@@ -187,7 +187,7 @@ export default {
     ...mapState('auriga', ['bms'])
   },
   methods: {
-    ...mapMutations('fenix', ['updateModulo']),
+    // ...mapMutations('fenix', ['updateModulo']),
     rgbInterpolationVOLTAJE (valor) {
       var maxV = 4.2
       var minV = 3.4
