@@ -72,25 +72,25 @@
       <div style="width: calc(50% - 1%);margin-right:1%;">
         <!-- Superior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.4)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.6)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.8)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.9)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.1)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.2)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.3)"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[67])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[66])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[65])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[64])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[63])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[62])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[61])"/>
           <div class="col heatmapSquare" style="background-color: transparent"/> <!-- empty -->
         </div>
         <!-- Inferior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.8)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.4)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.0)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.68)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.02)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.2)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.3)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.3)"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[68])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[69])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[70])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[71])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[72])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[73])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[74])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[75])"/>
         </div>
 
       </div>
@@ -99,23 +99,23 @@
       <div style="width: calc(50% - 1%);margin-left:1%;">
         <!-- Superior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.4)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.6)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.8)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.9)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.1)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.2)"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[60])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[59])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[58])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[57])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[56])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[55])"/>
           <div class="col heatmapSquare" style="background-color: transparent"/> <!-- empty -->
         </div>
         <!-- Inferior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.8)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.4)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.0)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(3.68)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.02)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.2)"/>
-          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(4.3)"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[76])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[77])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[78])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[79])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[80])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[81])"/>
+          <div class="col heatmapSquare" :style="rgbInterpolationGreenRedBackground(bms[82])"/>
         </div>
       </div>
   </div>
@@ -126,25 +126,25 @@
       <div style="width: calc(50% - 1%);margin-right:1%;">
         <!-- Superior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(60)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(50)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(40)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(30)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(20)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(10)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(0)"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[95])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[94])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[93])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[92])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[91])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[90])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[89])"/>
           <div class="col heatmapSquare" style="background-color: transparent"/> <!-- empty -->
         </div>
         <!-- Inferior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(10)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(15)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(20)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(25)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(30)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(35)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(40)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(45)"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[96])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[97])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[98])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[99])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[100])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[101])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[102])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[103])"/>
         </div>
 
       </div>
@@ -153,23 +153,23 @@
       <div style="width: calc(50% - 1%);margin-left:1%;">
         <!-- Superior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(62)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(58)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(56)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(62)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(54)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(53)"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[88])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[87])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[86])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[85])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[84])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[83])"/>
           <div class="col heatmapSquare" style="background-color: transparent"/> <!-- empty -->
         </div>
         <!-- Inferior -->
         <div class="row" style="width: 100%">
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(15)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(24)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(13)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(27)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(33)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(48)"/>
-          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(38)"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[104])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[105])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[106])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[107])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[108])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[109])"/>
+          <div class="col heatmapSquare" :style="hslInterpolationBlueRedBackground(bms[110])"/>
         </div>
       </div>
   </div>

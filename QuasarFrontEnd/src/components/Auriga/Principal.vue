@@ -45,7 +45,7 @@
                     <div :style="'width:100%;height:100%;display:flex;flex-direction:row;align-items:start;justify-content:space-evenly;padding: 0px 0px 0px 0px'">
                         <div class="col">
                             <div class="allCenter biggernumero">
-                                {{42}}
+                                {{bms[48]}}
                             </div>
                             <div class="allCenter">
                                 Max °C
@@ -53,7 +53,7 @@
                         </div>
                         <div class="col">
                             <div class="allCenter biggernumero">
-                                {{ 26 }}
+                                {{bms[45].toFixed(0)}}
                             </div>
                             <div class="allCenter">
                                 Avg °C
@@ -62,7 +62,8 @@
                         <hr :style="'height: 50%;margin: 20px'"/>
                         <div class="col">
                             <div class="allCenter biggernumero">
-                                {{ 12 }}
+                              <!-- TODO: CALCULAR DELTA TÉ *VELOCIDAD EN CADA UPDATE DEL STATE, AUNQUE PUEDE SER COSTOSO, PARA ESO SE NECESITA EL VALOR ANTERIOR DEL TIMESTAMP -->
+                                {{12}}
                             </div>
                             <div class="allCenter">
                                 Km
@@ -70,7 +71,7 @@
                         </div>
                         <div class="col">
                             <div class="allCenter biggernumero">
-                                {{54}}
+                                {{(100 * Math.max( (sevcon[0] * sevcon[3]) / (sevcon[0] * sevcon[1]) ,  ((sevcon[16] * sevcon[19]) / (sevcon[16] * sevcon[17])) )).toFixed(0) }}
                             </div>
                             <div class="allCenter">
                                 Eficiencia %
@@ -93,7 +94,7 @@
                     <div class="col">
                         <div style="padding-top:30%">
                             <div class="allCenter numero">
-                                {{ 121 }}
+                                {{ (sevcon[8] + sevcon[24]).toFixed(0) }}
                             </div>
                             <div class="allCenter">
                                 Nm
@@ -121,7 +122,7 @@
                     <div class="col">
                         <div style="padding-top:40%">
                             <div class="allCenter velocimetroNumero">
-                                {{ 50 }}
+                                {{ Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21])  }}
                             </div>
                             <div class="allCenter">
                                 km/hr
@@ -137,78 +138,78 @@
                 <KmRecorridos></KmRecorridos>
             </div> -->
             <div class="col-4">
-                <div class="allCenter" :style="'display: flex;flex-direction: column;align-items: center;justify-content: space-between'">
-                    <div :style="'width:100%;height:100%;display:flex;flex-direction:row;align-items:start;justify-content:space-between;padding: 0px 0px 0px 0px'">
-                        <div class="col">
-                            <div class="allCenter biggernumero">
-                                {{ 67 }}
-                            </div>
-                            <div class="allCenter">
-                                Sevcon °C
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="allCenter biggernumero">
-                                {{ 76 }}
-                            </div>
-                            <div class="allCenter">
-                                Motor °C
-                            </div>
-                        </div>
-                        <hr :style="'height: 50%;margin: 20px'"/>
-                        <div class="col">
-                            <div class="allCenter biggernumero">
-                                {{ 61 }}
-                            </div>
-                            <div class="allCenter">
-                                Sevcon °C
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="allCenter biggernumero">
-                                {{ 61 }}
-                            </div>
-                            <div class="allCenter">
-                                Motor °C
-                            </div>
-                        </div>
+              <div class="allCenter" :style="'display: flex;flex-direction: column;align-items: center;justify-content: space-between'">
+                <div :style="'width:100%;height:100%;display:flex;flex-direction:row;align-items:start;justify-content:space-between;padding: 0px 0px 0px 0px'">
+                  <div class="col">
+                    <div class="allCenter biggernumero">
+                      {{ sevcon[18] }}
                     </div>
-                    <VueSvgGauge
-                    :min="0"
-                    :max="10"
-                    :start-angle="-100"
-                    :end-angle="100"
-                    :value="7.2"
-                    :separator-step="2"
-                    :scale-interval="1"
-                    :inner-radius="65"
-                    :gaugeColor="[{ offset: 0, color: '#f59542' }, { offset: 100, color: '#f5424b' }]"
-                    :transitionDuration="10"
-                    :style=" 'height: fit-content'"
-                    >
-                    <div class="col">
-                        <div style="padding-top:30%">
-                            <div class="allCenter numero">
-                                {{ 7.2 }}
-                            </div>
-                            <div class="allCenter">
-                                kW
-                            </div>
-                        </div>
+                    <div class="allCenter">
+                      Sevcon °C
                     </div>
-                    </VueSvgGauge>
-                    <!-- {{ mainData[0] }} Velocidad -->
+                  </div>
+                  <div class="col">
+                    <div class="allCenter biggernumero">
+                      {{ "--" }}
+                    </div>
+                    <div class="allCenter">
+                      Motor °C
+                    </div>
+                  </div>
+                  <hr :style="'height: 50%;margin: 20px'"/>
+                  <div class="col">
+                    <div class="allCenter biggernumero">
+                      {{ sevcon[2] }}
+                    </div>
+                    <div class="allCenter">
+                      Sevcon °C
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="allCenter biggernumero">
+                      {{ "--" }}
+                    </div>
+                    <div class="allCenter">
+                      Motor °C
+                    </div>
+                  </div>
                 </div>
+                <VueSvgGauge
+                :min="0"
+                :max="10"
+                :start-angle="-100"
+                :end-angle="100"
+                :value="7.2"
+                :separator-step="2"
+                :scale-interval="1"
+                :inner-radius="65"
+                :gaugeColor="[{ offset: 0, color: '#f59542' }, { offset: 100, color: '#f5424b' }]"
+                :transitionDuration="10"
+                :style=" 'height: fit-content'"
+                >
+                <div class="col">
+                  <div style="padding-top:30%">
+                    <div class="allCenter numero">
+                      {{ ((sevcon[0] * sevcon[3] + sevcon[16] * sevcon[19]) / 1000).toFixed(1) }}
+                    </div>
+                    <div class="allCenter">
+                      kW
+                    </div>
+                  </div>
+                </div>
+                </VueSvgGauge>
+                  <!-- {{ mainData[0] }} Velocidad -->
+              </div>
             </div>
         </div>
         <HeatMap/>
 
         <div>
-            <AlertasInferiores/>
+          <AlertasInferiores/>
         </div>
 
         <div>
-            <Mppt/>
+          <Mppt/>
         </div>
         <div>
             <BMSVoltTemp/>
@@ -217,7 +218,7 @@
             <Sevcon/>
         </div> -->
         <div style="margin-top: 2%">
-            <ConsumoChart/>
+          <ConsumoChart/>
         </div>
         <div class="row">
           <Menu/>
@@ -243,11 +244,13 @@ export default {
   components: { VueSvgGauge, HeatMap, AlertasInferiores, ConsumoChart, Mppt, BMSVoltTemp, Menu },
   computed: {
     ...mapState('general', ['darkMode']),
+    ...mapState('auriga', ['bms', 'sevcon', 'mppt1', 'mppt2']),
     progressLabel2 () {
-      return (this.$store.state.fenix.mainData[3]).toFixed(0) + ' %'
+      return this.$store.state.auriga.bms[41].toFixed(0) + ' %'
     },
     progressLabelPotenciaPaneles () {
-      return '570' + ' W'
+      //  TODO: QUIZAS CAMBIAR ESTO AL HACER UPDATE EN EL STATE
+      return (this.$store.state.auriga.mppt1[0] * this.$store.state.auriga.mppt1[1] + this.$store.state.auriga.mppt2[0] * this.$store.state.auriga.mppt2[1]).toFixed(0) + ' W'
     }
   },
   data () {

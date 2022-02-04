@@ -13,7 +13,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{230}}
+          {{ (mppt1[0] * mppt1[1]).toFixed(0) }}
         </div>
         <div class="biggertag">
           W
@@ -21,7 +21,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{ mppt1[0].toFixed(1)}}
         </div>
         <div class="biggertag">
           V in
@@ -29,7 +29,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{mppt1[1].toFixed(1)}}
         </div>
         <div class="biggertag">
           I in
@@ -37,7 +37,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{mppt1[2].toFixed(1)}}
         </div>
         <div class="biggertag">
           V out
@@ -77,7 +77,7 @@
       </div> -->
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{25}}
+          {{mppt1[7].toFixed(0)}}
         </div>
         <div class="biggertag">
           T °C
@@ -100,7 +100,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{230}}
+          {{ (mppt2[0] * mppt2[1]).toFixed(0) }}
         </div>
         <div class="biggertag">
           W
@@ -108,7 +108,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{ mppt2[0].toFixed(1) }}
         </div>
         <div class="biggertag">
           V in
@@ -116,7 +116,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{ mppt2[1].toFixed(1) }}
         </div>
         <div class="biggertag">
           I in
@@ -124,7 +124,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{67.5}}
+          {{ mppt2[2].toFixed(1) }}
         </div>
         <div class="biggertag">
           V out
@@ -164,7 +164,7 @@
       </div> -->
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{25}}
+          {{ mppt2[7].toFixed(0) }}
         </div>
         <div class="biggertag">
           T °C
@@ -175,8 +175,13 @@
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex'
 
+export default {
+  name: 'Mppt',
+  computed: {
+    ...mapState('auriga', ['mppt1', 'mppt2'])
+  }
 }
 </script>
 

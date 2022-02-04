@@ -20,6 +20,10 @@ export function updateBms (state, array) {
 
 export function updateSevcon (state, array) {
   updateComponent(state, array, 1E1, 'sevcon')
+  Vue.set(state.data_grafico_3, 0, array[16] * array[19]) // [Pin_izq, Pout_izq, Pin_der, Pout_der]
+  Vue.set(state.data_grafico_3, 1, array[16] * array[19])
+  Vue.set(state.data_grafico_3, 2, array[0] * array[3])
+  Vue.set(state.data_grafico_3, 3, array[0] * array[3])
 }
 
 export function updateMppt1 (state, array) {
