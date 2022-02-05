@@ -45,7 +45,7 @@
                     <div :style="'width:100%;height:100%;display:flex;flex-direction:row;align-items:start;justify-content:space-evenly;padding: 0px 0px 0px 0px'">
                         <div class="col">
                             <div class="allCenter biggernumero">
-                                {{bms[48]}}
+                                {{bms[48].toFixed(0)}}
                             </div>
                             <div class="allCenter">
                                 Max °C
@@ -63,7 +63,7 @@
                         <div class="col">
                             <div class="allCenter biggernumero">
                               <!-- TODO: CALCULAR DELTA TÉ *VELOCIDAD EN CADA UPDATE DEL STATE, AUNQUE PUEDE SER COSTOSO, PARA ESO SE NECESITA EL VALOR ANTERIOR DEL TIMESTAMP -->
-                                {{12}}
+                                {{"--"}}
                             </div>
                             <div class="allCenter">
                                 Km
@@ -112,7 +112,7 @@
                     :max="100"
                     :start-angle="-145"
                     :end-angle="145"
-                    :value="Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21])"
+                    :value="Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21]).toFixed(0)"
                     :separator-step="10"
                     :scale-interval="5"
                     :inner-radius="85"
@@ -122,7 +122,7 @@
                     <div class="col">
                         <div style="padding-top:40%">
                             <div class="allCenter velocimetroNumero">
-                                {{ Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21])  }}
+                                {{ Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21]).toFixed(0)  }}
                             </div>
                             <div class="allCenter">
                                 km/hr
@@ -142,7 +142,7 @@
                 <div :style="'width:100%;height:100%;display:flex;flex-direction:row;align-items:start;justify-content:space-between;padding: 0px 0px 0px 0px'">
                   <div class="col">
                     <div class="allCenter biggernumero">
-                      {{ sevcon[18] }}
+                      {{ sevcon[18].toFixed(0) }}
                     </div>
                     <div class="allCenter">
                       Sevcon °C
@@ -159,7 +159,7 @@
                   <hr :style="'height: 50%;margin: 20px'"/>
                   <div class="col">
                     <div class="allCenter biggernumero">
-                      {{ sevcon[2] }}
+                      {{ sevcon[2].toFixed(0) }}
                     </div>
                     <div class="allCenter">
                       Sevcon °C
