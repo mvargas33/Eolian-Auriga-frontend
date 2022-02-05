@@ -6,7 +6,7 @@
         <div class="row" style="padding-bottom: 2%">
             <div style="padding-right: 1%;width: 50%">
                 <div class="row justify-center full-width text-center">
-                <q-linear-progress stripe size="50px" :value="600/800"
+                <q-linear-progress stripe size="50px" :value="progressLabelPotenciaPaneles"
                 :color="'green'"
                 :track-color="'grey'"
                 class="q-mt-sm"
@@ -16,7 +16,7 @@
                     <div class="absolute-full flex flex-center">
                     <!-- <q-badge trasparent text-color="black" :label="progressLabelPotenciaPaneles" style="font-size: 70%"/> -->
                     <div class="allCenter" :style="darkMode ? 'font-size:80%;color: white' : 'font-size:80%;color: black'">
-                        {{progressLabelPotenciaPaneles}}
+                        {{progressLabelPotenciaPaneles + ' W'}}
                     </div>
                     </div>
                 </q-linear-progress>
@@ -24,7 +24,7 @@
             </div>
             <div style="padding-left: 1%;width: 50%">
                 <div class="row justify-center full-width text-center">
-                <q-linear-progress stripe size="50px" :value="33.0/100.0"
+                <q-linear-progress stripe size="50px" :value="progressLabel2"
                 :color="'red'"
                 :track-color="'grey'"
                 class="q-mt-sm"
@@ -32,7 +32,7 @@
                     <div class="absolute-full flex flex-center">
                     <!-- <q-badge trasparent text-color="black" :label="progressLabel2" style="font-size: 70%"/> -->
                     <div class="allCenter" :style="darkMode ? 'font-size:80%;color: white' : 'font-size:80%;color: black'">
-                        {{progressLabel2}}
+                        {{progressLabel2  + ' %'}}
                     </div>
                     </div>
                 </q-linear-progress>
@@ -83,7 +83,7 @@
                     :max="300"
                     :start-angle="-100"
                     :end-angle="100"
-                    :value="121"
+                    :value="(sevcon[8] + sevcon[24]).toFixed(0)"
                     :separator-step="50"
                     :scale-interval="100"
                     :inner-radius="65"
@@ -112,7 +112,7 @@
                     :max="100"
                     :start-angle="-145"
                     :end-angle="145"
-                    :value="50"
+                    :value="Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21])"
                     :separator-step="10"
                     :scale-interval="5"
                     :inner-radius="85"
@@ -179,7 +179,7 @@
                 :max="10"
                 :start-angle="-100"
                 :end-angle="100"
-                :value="7.2"
+                :value="((sevcon[0] * sevcon[3] + sevcon[16] * sevcon[19]) / 1000).toFixed(1)"
                 :separator-step="2"
                 :scale-interval="1"
                 :inner-radius="65"
@@ -246,11 +246,11 @@ export default {
     ...mapState('general', ['darkMode']),
     ...mapState('auriga', ['bms', 'sevcon', 'mppt1', 'mppt2']),
     progressLabel2 () {
-      return this.$store.state.auriga.bms[41].toFixed(0) + ' %'
+      return this.$store.state.auriga.bms[41].toFixed(0)
     },
     progressLabelPotenciaPaneles () {
       //  TODO: QUIZAS CAMBIAR ESTO AL HACER UPDATE EN EL STATE
-      return (this.$store.state.auriga.mppt1[0] * this.$store.state.auriga.mppt1[1] + this.$store.state.auriga.mppt2[0] * this.$store.state.auriga.mppt2[1]).toFixed(0) + ' W'
+      return (this.$store.state.auriga.mppt1[0] * this.$store.state.auriga.mppt1[1] + this.$store.state.auriga.mppt2[0] * this.$store.state.auriga.mppt2[1]).toFixed(0)
     }
   },
   data () {
