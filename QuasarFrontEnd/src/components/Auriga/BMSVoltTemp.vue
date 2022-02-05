@@ -37,7 +37,7 @@
       </div>
       <div style="display:flex;flex-direction: column;alignItems: center;justify-content: center;font-size:18px;">
         <div style="height: 60px;" class="numero">
-          {{averageVolt.toFixed(2)}}
+          {{averageVolt}}
         </div>
         <div class="biggertag">
           Avg

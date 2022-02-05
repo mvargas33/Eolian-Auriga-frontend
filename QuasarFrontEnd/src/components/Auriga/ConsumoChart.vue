@@ -31,41 +31,41 @@ export default {
     // de esta forma, el gráfico mustra el valor anterior hasta que cambie el store y se vuelva a cambiar el onRefresh con el nuevo valor
     data_grafico_3: function (newValue, oldValue) {
       var now = Date.now()
-      this.$data._chart.config.data.datasets[0].data.push({
-        x: now,
-        y: newValue[0]
-      })
-      this.$data._chart.config.data.datasets[1].data.push({
-        x: now,
-        y: newValue[1]
-      })
-      this.$data._chart.config.data.datasets[2].data.push({
-        x: now,
-        y: newValue[2]
-      })
-      this.$data._chart.config.data.datasets[3].data.push({
-        x: now,
-        y: newValue[3]
-      })
+      // this.$data._chart.config.data.datasets[0].data.push({
+      //   x: now,
+      //   y: newValue[0]
+      // })
+      // this.$data._chart.config.data.datasets[1].data.push({
+      //   x: now,
+      //   y: newValue[1]
+      // })
+      // this.$data._chart.config.data.datasets[2].data.push({
+      //   x: now,
+      //   y: newValue[2]
+      // })
+      // this.$data._chart.config.data.datasets[3].data.push({
+      //   x: now,
+      //   y: newValue[3]
+      // })
 
-      // this.$data._chart.options.scales.xAxes[0].realtime.onRefresh = (chart) => {
-      //   chart.config.data.datasets[0].data.push({
-      //     x: now,
-      //     y: newValue[0]
-      //   })
-      //   chart.config.data.datasets[1].data.push({
-      //     x: now,
-      //     y: newValue[1]
-      //   })
-      //   chart.config.data.datasets[2].data.push({
-      //     x: now,
-      //     y: newValue[2]
-      //   })
-      //   chart.config.data.datasets[3].data.push({
-      //     x: now,
-      //     y: newValue[3]
-      //   })
-      // }
+      this.$data._chart.options.scales.xAxes[0].realtime.onRefresh = (chart) => {
+        chart.config.data.datasets[0].data.push({
+          x: now,
+          y: newValue[0]
+        })
+        chart.config.data.datasets[1].data.push({
+          x: now,
+          y: newValue[1]
+        })
+        chart.config.data.datasets[2].data.push({
+          x: now,
+          y: newValue[2]
+        })
+        chart.config.data.datasets[3].data.push({
+          x: now,
+          y: newValue[3]
+        })
+      }
     }
   },
   // Configuración inicial antes que lleguen los datos
