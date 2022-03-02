@@ -112,7 +112,7 @@
                     :max="100"
                     :start-angle="-145"
                     :end-angle="145"
-                    :value="Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21]).toFixed(0)"
+                    :value="(0.00376991118431 * 30 * sevcon[2]).toFixed(2)"
                     :separator-step="10"
                     :scale-interval="5"
                     :inner-radius="85"
@@ -122,7 +122,7 @@
                     <div class="col">
                         <div style="padding-top:40%">
                             <div class="allCenter velocimetroNumero">
-                                {{ Math.max(0.00376991118431 * 30 * sevcon[5], 0.00376991118431 * 30 * sevcon[21]).toFixed(0)  }}
+                                {{ (0.00376991118431 * 30 * sevcon[2]).toFixed(2)  }}
                             </div>
                             <div class="allCenter">
                                 km/hr
@@ -159,7 +159,7 @@
                   <hr :style="'height: 50%;margin: 20px'"/>
                   <div class="col">
                     <div class="allCenter biggernumero">
-                      {{ sevcon[2].toFixed(0) }}
+                      {{ sevcon[5].toFixed(0) }}
                     </div>
                     <div class="allCenter">
                       Sevcon °C
